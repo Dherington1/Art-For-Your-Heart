@@ -3,7 +3,7 @@ import { useMutation } from "@apollo/react-hooks";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
 import './login.css'
-
+import {Link} from 'react-router-dom'
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
@@ -49,16 +49,18 @@ function Login(props) {
                 />
                 <button class="login-form__button" type="submit">Login</button>
                 
-                <div class="login-form__links">
-                    <a class="login-form__link" href="/">Register</a>
-                </div>
+                <Link to='/register'>
+                  <div class="login-form__links">
+                      <a class="login-form__link" href="/">Register</a>
+                  </div>
+                </Link>
 
                 {error ? (
                   <div>
                     <p className="error-text">The provided credentials are incorrect</p>
                   </div>
                 ) : null}
-                
+
             </div>
         </form>
     </div>

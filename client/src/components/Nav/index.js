@@ -28,7 +28,7 @@ function NavBar() {
           <Collapse navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">HOME</NavLink>
+                <NavLink href="/">HOME</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -36,7 +36,7 @@ function NavBar() {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <Link to='/login'>
+                    <Link to='/professional'>
                       PROFESSIONAL ART
                     </Link>
                   </DropdownItem>
@@ -68,7 +68,7 @@ function NavBar() {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                  <Link to='/login'>
+                  <Link to='/professional'>
                       PROFESSIONAL ART
                     </Link>
                   </DropdownItem>
