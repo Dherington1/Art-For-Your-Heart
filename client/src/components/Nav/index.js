@@ -1,58 +1,101 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from 'reactstrap';
 
-function Nav() {
+function NavBar() {
 
+  
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
-            </Link>
-          </li>
-          <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-          </li>
-        </ul>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">Art for your heart </NavbarBrand>
+          <NavbarToggler  />
+          <Collapse navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/components/">HOME</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  SHOP
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    <Link to='/login'>
+                      PROFESSIONAL ART
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to='/kids'>
+                      KIDS ART
+                    </Link>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+                <NavLink href="/" onClick={() => Auth.logout()}>Logout</NavLink>
+            </Nav>
+          </Collapse>
+        </Navbar>
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-        </ul>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">Art for your heart </NavbarBrand>
+          <NavbarToggler  />
+          <Collapse navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/">HOME</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  SHOP
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                  <Link to='/login'>
+                      PROFESSIONAL ART
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <Link to='/kids'>
+                      KIDS ART
+                    </Link>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+                <NavLink href="/signup" >REGISTER</NavLink>
+                <NavLink href="/login">LOGIN</NavLink>
+            </Nav>
+          </Collapse>
+
+        </Navbar>
+     
       );
     }
+ 
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
-        </Link>
-      </h1>
-
-      <nav>
+      <div>
         {showNavigation()}
-      </nav>
-    </header>
-  );
+      </div>
+    );
 }
 
-export default Nav;
+export default NavBar;

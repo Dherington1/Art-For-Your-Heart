@@ -38,55 +38,47 @@ function Signup(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
-
-      <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+    <div>
+      <form class="login-form" onSubmit={handleFormSubmit}>
+            <div class="login-form__content">
+                <div class="login-form__header">Register for an account</div>
+                <input class="login-form__input" type="text" name="dc_username"
+                  placeholder="First Name"
+                  name="firstName"
+                  type="firstName"
+                  id="firstName"
+                  onChange={handleChange}
+                />
+                <input class="login-form__input" type="text" name="dc_username"
+                  placeholder="Last Name"
+                  name="lastName"
+                  type="lastName"
+                  id="lastName"
+                  onChange={handleChange}
+                />
+                <input class="login-form__input" type="text" name="dc_username" 
+                  placeholder="Email"
+                  name="email"
+                  type="email"
+                  id="email"
+                  onChange={handleChange}
+                 />
+                <input class="login-form__input" type="password" name="dc_username" 
+                  placeholder="Password" 
+                  name="password"
+                  type="password"
+                  id="pwd"
+                  onChange={handleChange}
+                />
+                <button class="login-form__button" type="submit">Register</button>
+                <Link to='/login'>
+                  <div class="login-form__links">
+                      <a class="login-form__link" href="/">login</a>
+                  </div>
+                </Link>
+              
+            </div>
+        </form>
     </div>
   );
 }

@@ -1,0 +1,8 @@
+.Hero-img {
+  width: 90vw;
+  height: 50vh;
+  margin-top: 20px;
+  padding-bottom: 70px ;
+  border-bottom: 2px solid black;
+  object-fit: cover;
+}
