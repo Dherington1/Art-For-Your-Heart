@@ -41,9 +41,6 @@ const Footer = () => {
             <Link to='/'>Store Policy</Link>
           </p>
           <p>
-            <Link to='/'>Store Policy</Link>
-          </p>
-          <p>
             <Link to='/'>FAQ</Link>
           </p>
         </Col>

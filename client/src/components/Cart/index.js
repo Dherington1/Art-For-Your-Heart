@@ -8,6 +8,7 @@ import Auth from "../../utils/auth";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { useSelector, useDispatch } from "react-redux";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -64,11 +65,8 @@ const Cart = () => {
 
   if (!state.cartOpen) {
     return (
-      <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
-          🛒
-        </span>
-      </div>
+      <>
+      </>
     );
   }
 
@@ -88,19 +86,24 @@ const Cart = () => {
             <strong>Total: $ {calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <>
+                <button onClick={submitCheckout}>Checkout</button>
+                <Link to='/cart'>
+                  <button>Go to Cart</button>
+                </Link>
+              </>
             ) : (
-              <span>(log in to check out)</span>
+              <Link to='/login'>
+                <span>(log in to check out)</span>
+              </Link>
             )}
           </div>
         </div>
       ) : (
-        <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
-          You haven't added anything to your cart yet!
-        </h3>
+      
+        <>
+          <p>Your cart is currently empty</p>
+        </>
       )}
     </div>
   );
