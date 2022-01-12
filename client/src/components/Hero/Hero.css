@@ -6,3 +6,20 @@
   border-bottom: 2px solid black;
   object-fit: cover;
 }
+.parent{
+  position: relative;
+}
+
+
+.top-part{
+  background-color: black;
+  position: absolute;
+  top: 250px;
+  left: 190px;
+  padding: 150px;
+}
+
+.bottom-part{
+
+}
+

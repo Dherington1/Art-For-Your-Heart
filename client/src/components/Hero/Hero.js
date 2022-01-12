@@ -5,8 +5,13 @@ const Hero = () => {
 
 
   return (
-    <div>
-      <img className='Hero-img' src='/images/arts-and-craft.jpeg' alt='hero'/>
+    <div className='parent'>
+      <div className='bottom-part'>
+        <img className='Hero-img' src='/images/flatlay-craft-diy-school-arts.jpeg' alt='hero'/>
+      </div>
+      {/* <div className='top-part'>
+        <p>hello</p>
+      </div> */}
     </div>
   )
 }

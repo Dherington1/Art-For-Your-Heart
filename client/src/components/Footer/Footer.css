@@ -1,0 +1,29 @@
+.footer-container{
+  border-top: 3px solid black;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+.footer-row{
+  padding-top: 45px;
+}
+
+.input-box{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.newsLetter-p{
+
+}
+
+.left{
+  margin-right: 50px;
+}
+
+.footer-button{
+
+}

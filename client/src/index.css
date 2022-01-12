@@ -96,11 +96,12 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  border: 1px black solid;
 }
 
 button:hover {
-  opacity: .8;
+  color: #686868;
+  cursor: pointer;
 }
 
 button[disabled] {
