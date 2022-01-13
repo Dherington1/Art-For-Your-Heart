@@ -70,10 +70,10 @@ function NavBar() {
     if (Auth.loggedIn()) {
       return (
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Art for your heart </NavbarBrand>
+          <NavbarBrand href="/">ART FOR YOUR HEART</NavbarBrand>
           <NavbarToggler  />
           <Collapse navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className=" justify-content-end" navbar style={{ width: "100%" }}>
               <NavItem>
                 <NavLink href="/">HOME</NavLink>
               </NavItem>
@@ -94,7 +94,7 @@ function NavBar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-                <NavLink href="/" onClick={() => Auth.logout()}>Logout</NavLink>
+                <NavLink href="/" onClick={() => Auth.logout()}>LOGOUT</NavLink>
                 <NavLink onClick={toggleCart}><i class="fas fa-shopping-cart"></i></NavLink>
             </Nav>
           </Collapse>
@@ -106,7 +106,7 @@ function NavBar() {
           <NavbarBrand href="/">Art for your heart </NavbarBrand>
           <NavbarToggler  />
           <Collapse navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className=" justify-content-end" navbar style={{ width: "100%" }}>
               <NavItem>
                 <NavLink href="/">HOME</NavLink>
               </NavItem>

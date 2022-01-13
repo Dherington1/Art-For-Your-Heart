@@ -6,6 +6,7 @@ import {
   Col
 } from 'reactstrap';
 import './ShopCategories.css'
+import { Link } from 'react-router-dom';
 
 const ShopCategories = () => {
   return (
@@ -16,10 +17,25 @@ const ShopCategories = () => {
 
         <Row>
           <Col>
-            <img className='category-img' src='/images/art-therapy-mc-inline-201016-05.jpeg' alt='adult-art' />
+            <figure class="textcenter">
+              <img className='category-img' src='/images/art-therapy-mc-inline-201016-05.jpeg' alt='kid-art' /> 
+              <figcaption>
+                <Link to='/professional'>
+                  <button>Professional Art</button>
+                </Link>
+              </figcaption>
+            </figure>
           </Col>
+
           <Col>
-            <img className='category-img' src='/images/happy-kids-doing-arts-crafts-together-DIY-Kids-Crafts-ss-Feature.jpeg' alt='kid-art' />
+            <figure class="textcenter">
+              <img className='category-img' src='/images/happy-kids-doing-arts-crafts-together-DIY-Kids-Crafts-ss-Feature.jpeg' alt='kid-art' /> 
+              <figcaption>
+                <Link to='/kids'>
+                  <button>Kids Art</button>
+                </Link>
+              </figcaption>
+            </figure>
           </Col>
         </Row>
       </Container>

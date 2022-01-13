@@ -5,14 +5,15 @@ const Hero = () => {
 
 
   return (
-    <div className='parent'>
-      <div className='bottom-part'>
+   
+      <figure className="textover">
         <img className='Hero-img' src='/images/flatlay-craft-diy-school-arts.jpeg' alt='hero'/>
-      </div>
-      {/* <div className='top-part'>
-        <p>hello</p>
-      </div> */}
-    </div>
+        <figcaption>
+         
+         ARTS & CRAFTS SUPPLIES FOR EVERYONE
+        </figcaption>
+      </figure>
+    
   )
 }
 

@@ -88,9 +88,9 @@ const Cart = () => {
             {Auth.loggedIn() ? (
               <>
                 <button onClick={submitCheckout}>Checkout</button>
-                <Link to='/cart'>
+                {/* <Link to='/cart'>
                   <button>Go to Cart</button>
-                </Link>
+                </Link> */}
               </>
             ) : (
               <Link to='/login'>

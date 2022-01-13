@@ -6,20 +6,22 @@
   border-bottom: 2px solid black;
   object-fit: cover;
 }
-.parent{
+
+.textover{
+  /* max-width: 600px; */
   position: relative;
 }
 
-
-.top-part{
-  background-color: black;
+.textover figcaption {
   position: absolute;
-  top: 250px;
-  left: 190px;
-  padding: 150px;
+  /* VERTICAL CENTER */
+  top: 40%;
+  left: 0;
+  /* HORIZONTAL CENTER */
+  width: 100%;
+  text-align: center;
+  /* COSMETICS */
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
 }
-
-.bottom-part{
-
-}
-

@@ -22,6 +22,7 @@ const Footer = () => {
           <input className='input-box' placeholder='Email *' type="email" />
           <div>
           <button className='footer-button'>Subscribe</button>
+          
           </div>
         </Col>
         {/* middle */}
