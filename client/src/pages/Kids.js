@@ -13,7 +13,7 @@ import Cart from "../components/Cart";
 const Kids = () => {
 
   const [products, setProducts] = useState([])  
-  const [search, setSearch] =useState('61df9cdff3a965158ea9ad06')
+  const [search, setSearch] =useState('61dfa9bfec684320a8b67104')
 
   // grab our data from the query 
   const {data: categoryData} = useQuery(QUERY_PRODUCTS, {

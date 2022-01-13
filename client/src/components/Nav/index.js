@@ -103,7 +103,7 @@ function NavBar() {
     } else {
       return (
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Art for your heart </NavbarBrand>
+          <NavbarBrand href="/">ART FOR YOUR HEART </NavbarBrand>
           <NavbarToggler  />
           <Collapse navbar>
             <Nav className=" justify-content-end" navbar style={{ width: "100%" }}>

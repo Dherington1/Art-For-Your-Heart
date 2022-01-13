@@ -8,19 +8,17 @@
   opacity: 1.0;
 }
 
-figcaption {
-  position: absolute;
-  margin-top: -45px;
+.fig {
+  /* position: absolute;
+  margin-top: -45px; */
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   color: black;
-  border:solid 2.5px black;
-  background-color: white;
 }
-figcaption:hover{
-  background-color: lightgrey;
-}
+/* .fig:hover{
+  color: blue;
+} */
  
 
 h3{
@@ -58,4 +56,7 @@ h3{
 .textcenter figcaption button {
   padding: 10px 15px;
   width: 50%;
+}
+.textcenter figcaption button:hover{
+  color: blue;
 }

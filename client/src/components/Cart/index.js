@@ -94,7 +94,7 @@ const Cart = () => {
               </>
             ) : (
               <Link to='/login'>
-                <span>(log in to check out)</span>
+                <span onClick={toggleCart}>(log in to check out)</span>
               </Link>
             )}
           </div>

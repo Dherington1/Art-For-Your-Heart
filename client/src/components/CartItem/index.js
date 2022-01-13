@@ -41,7 +41,7 @@ const CartItem = ({ item }) => {
   return (
 
 
-    <Container>
+    <Container className="cart-container">
       <Row>
         {/* img */}
         <Col>

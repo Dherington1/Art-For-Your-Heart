@@ -19,7 +19,7 @@ const ShopCategories = () => {
           <Col>
             <figure class="textcenter">
               <img className='category-img' src='/images/art-therapy-mc-inline-201016-05.jpeg' alt='kid-art' /> 
-              <figcaption>
+              <figcaption className='fig'>
                 <Link to='/professional'>
                   <button>Professional Art</button>
                 </Link>
