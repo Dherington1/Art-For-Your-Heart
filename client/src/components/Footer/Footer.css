@@ -2,7 +2,9 @@
   border-top: 3px solid black;
   margin-top: 45px;
   margin-bottom: 20px;
+  
 }
+
 
 .footer-row{
   padding-top: 45px;
@@ -16,14 +18,11 @@
   margin-bottom: 10px;
 }
 
-.newsLetter-p{
-
-}
 
 .left{
   margin-right: 50px;
 }
 
 .footer-button{
-
+width: 200px;
 }

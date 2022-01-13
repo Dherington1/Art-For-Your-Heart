@@ -25,6 +25,37 @@ figcaption:hover{
 
 h3{
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.container-category{
+  padding-bottom: 40px;
+  border-bottom: 2px solid black;
+}
+
+/* (B) RESPONSIVE IMAGE */
+.textcenter img { width: 100%; }
+.textcenter { max-width: 600px; } /* OPTIONAL */
+ 
+/* (C) CENTER TEXT ON IMAGE */
+.textcenter { position: relative; }
+.textcenter figcaption {
+  position: absolute;
+  /* VERTICAL CENTER */
+  top: 50%;
+  left: 0;
+  /* HORIZONTAL CENTER */
+  width: 100%;
+  text-align: center;
+  /* COSMETICS */
+  color: blue;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+.textcenter figcaption button {
+  padding: 10px 15px;
+  width: 50%;
 }

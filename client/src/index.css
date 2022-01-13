@@ -148,6 +148,11 @@ input:focus {
   flex-wrap: wrap;
 }
 
+.shop-container{
+  border-top: 3px solid black;
+  padding-top: 35px;
+}
+
 .space-between {
   justify-content: space-between;
 }
@@ -196,9 +201,18 @@ input:focus {
   padding-bottom: var(--spacing-two);
 }
 
+.product-name{
+  padding-top: 14px;
+}
+
+.product-price{
+  padding-bottom: 14px;
+}
+
 .card {
   width: 25%;
   text-align: center;
+  margin-left: 40px;
 }
 
 .error-text {

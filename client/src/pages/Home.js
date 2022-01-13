@@ -1,6 +1,4 @@
 import React from "react";
-// import ProductList from "../components/ProductList";
-// import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
 import Hero from "../components/Hero/Hero";
 import ShopCategories from "../components/ShopCategories/ShopCategories";
@@ -13,9 +11,6 @@ const Home = () => {
       <Hero />
       <ShopCategories />
       <ShopFav />
-
-      {/* <CategoryMenu />
-      <ProductList /> */}
       <Cart />
     </div>
   );

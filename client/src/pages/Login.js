@@ -4,6 +4,8 @@ import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
 import './login.css'
 import {Link} from 'react-router-dom'
+import Cart from '../components/Cart/index'
+
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
@@ -51,7 +53,7 @@ function Login(props) {
                 
                 <Link to='/register'>
                   <div class="login-form__links">
-                      <a class="login-form__link" href="/">Register</a>
+                      <a class="login-form__link" href="/signup">Register</a>
                   </div>
                 </Link>
 
@@ -63,6 +65,7 @@ function Login(props) {
 
             </div>
         </form>
+        <Cart />
     </div>
   );
 }

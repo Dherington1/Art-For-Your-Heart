@@ -11,18 +11,31 @@ import { Link } from 'react-router-dom';
 const ShopCategories = () => {
   return (
     <div>
-      <Container>
+      <Container className='container-category'>
 
         <h3>SHOP BY CATEGORY</h3>
 
         <Row>
           <Col>
-            <Link to = "/professional"><img className='category-img' src='/images/art-therapy-mc-inline-201016-05.jpeg' alt='adult-art' />
-            <figcaption>Professional Art</figcaption></Link> 
+            <figure class="textcenter">
+              <img className='category-img' src='/images/art-therapy-mc-inline-201016-05.jpeg' alt='kid-art' /> 
+              <figcaption>
+                <Link to='/professional'>
+                  <button>Professional Art</button>
+                </Link>
+              </figcaption>
+            </figure>
           </Col>
+
           <Col>
-          <Link to = "/kids"><img className='category-img' src='/images/happy-kids-doing-arts-crafts-together-DIY-Kids-Crafts-ss-Feature.jpeg' alt='kid-art' />
-            <figcaption>Kids Art</figcaption></Link>
+            <figure class="textcenter">
+              <img className='category-img' src='/images/happy-kids-doing-arts-crafts-together-DIY-Kids-Crafts-ss-Feature.jpeg' alt='kid-art' /> 
+              <figcaption>
+                <Link to='/kids'>
+                  <button>Kids Art</button>
+                </Link>
+              </figcaption>
+            </figure>
           </Col>
         </Row>
       </Container>

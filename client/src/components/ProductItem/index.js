@@ -14,6 +14,7 @@ function ProductItem(item) {
   const { cart } = state;
 
   const addToCart = () => {
+    console.log(_id)
     const itemInCart = cart.find(cartItem => cartItem._id === _id);
     if (itemInCart) {
       dispatch({
@@ -35,15 +36,12 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
+    <div className="card ">
       <Link to={`/products/${_id}`}>
         <img alt={name} src={`/images/${image}`} />
-        <p>{name}</p>
       </Link>
-      <div>
-        <div>
-          {quantity} {pluralize("item", quantity)} in stock
-        </div>
+        <p className='product-name'>{name}</p>
+      <div className='product-price'>
         <span>${price}</span>
       </div>
       <button onClick={addToCart}>Add to cart</button>

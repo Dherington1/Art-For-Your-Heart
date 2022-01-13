@@ -1,0 +1,32 @@
+.detail-container{
+  margin-top: 25px;
+  padding-top: 20px;
+}
+
+.link-to-home{
+  padding-bottom: 20px;
+}
+
+.name{
+  padding-bottom: 15px;
+}
+
+.price{padding-bottom: 15px;}
+.quantity{padding-bottom: 5px;}
+.input{
+  padding-bottom: 20px;
+  
+}
+.inputBox{
+  width: 50px;
+}
+
+.toCartBtn{
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.productInfo{
+  border-bottom: 2px solid black;
+  text-align: center;
+}

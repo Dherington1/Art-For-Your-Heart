@@ -22,6 +22,7 @@ const Footer = () => {
           <input className='input-box' placeholder='Email *' type="email" />
           <div>
           <button className='footer-button'>Subscribe</button>
+          
           </div>
         </Col>
         {/* middle */}
@@ -36,9 +37,6 @@ const Footer = () => {
           </p>
           <p>
             <Link to='/'>Shipping & Returns</Link>
-          </p>
-          <p>
-            <Link to='/'>Store Policy</Link>
           </p>
           <p>
             <Link to='/'>Store Policy</Link>
