@@ -13,7 +13,7 @@ import {
 const ShopFav = () => {
   
   const [products, setProducts] = useState([])  
-  const [search, setSearch] =useState('61de5e14bb9acb57ff4b578e')
+  const [search, setSearch] = useState('61df5878db560012457b8d52')
 
   // grab our data from the query 
   const {data: categoryData} = useQuery(QUERY_PRODUCTS, {

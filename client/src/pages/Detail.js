@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
-
+import 'bootstrap/dist/css/bootstrap.css';
+import {
+  Container,
+  Col, 
+  Row,
+  Card
+} from 'reactstrap';
 import Cart from "../components/Cart";
 import {
   REMOVE_FROM_CART,
@@ -11,8 +17,9 @@ import {
 } from "../utils/actions";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
-import spinner from "../assets/spinner.gif";
 import { useSelector, useDispatch } from "react-redux";
+import './Details.css'
+
 
 function Detail() {
   const state = useSelector(state => state);
@@ -26,6 +33,8 @@ function Detail() {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   const { products, cart } = state;
+
+  const [quantity, setQuantity] = useState(1)
 
   useEffect(() => {
     // already in global store
@@ -56,22 +65,27 @@ function Detail() {
 
   const addToCart = () => {
     const itemInCart = cart.find(cartItem => cartItem._id === id);
+    // if the item is in the cart update the quantity
     if (itemInCart) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
         _id: id,
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + quantity,
       });
       idbPromise("cart", "put", {
         ...itemInCart,
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + quantity,
       });
-    } else {
+      console.log(quantity)
+    } 
+    // if its not in the cart add it
+    else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...currentProduct, purchaseQuantity: 1 },
+        product: { ...currentProduct, purchaseQuantity: quantity },
       });
-      idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
+      idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: quantity });
+      console.log(quantity)
     }
   };
 
@@ -84,8 +98,64 @@ function Detail() {
     idbPromise("cart", "delete", { ...currentProduct });
   };
 
+  const handleQuantity = (e) => {
+    // value is equal to our quantity number
+    const value = e.target.value;
+    // set that number to our useState
+    setQuantity(value);
+  
+  }
+
   return (
     <>
+
+      <Container className="detail-container">
+        <Row>
+          <div className="link-to-home">
+            <Link to='/'>Home</Link> / {currentProduct.name}
+          </div>
+          {/* left column */}
+          <Col>
+          <img
+            src={`/images/${currentProduct.image}`}
+            alt={currentProduct.name}
+          />
+          </Col>
+          {/* right column */}
+          <Col>
+          <div className="name">
+            {currentProduct.name}
+          </div>
+
+          <div className="price">
+           $ {currentProduct.price}
+          </div>
+
+          <div className="quantity">
+            Quantity
+          </div>
+          <div className="input">
+            <input className="inputBox" type='number' value={quantity} onChange={handleQuantity}/>
+          </div>
+          <div className="toCart">
+            <button className="toCartBtn" onClick={addToCart}>Add to Cart</button>
+          </div>
+          
+          <div >
+            <p className="productInfo">Product info</p>
+          </div>
+          <div>
+            <p>{currentProduct.description}</p>
+          </div>
+
+          </Col>
+        </Row>
+      </Container>
+    <Cart />
+
+
+{/* 
+
       {currentProduct && cart ? (
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
@@ -111,8 +181,7 @@ function Detail() {
           />
         </div>
       ) : null}
-      {loading ? <img src={spinner} alt="loading" /> : null}
-      <Cart />
+      <Cart /> */}
     </>
   );
 }

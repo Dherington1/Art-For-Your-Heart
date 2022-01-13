@@ -10,7 +10,7 @@ import './ShopCategories.css'
 const ShopCategories = () => {
   return (
     <div>
-      <Container>
+      <Container className='container-category'>
 
         <h3>SHOP BY CATEGORY</h3>
 

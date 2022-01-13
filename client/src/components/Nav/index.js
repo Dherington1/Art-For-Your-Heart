@@ -95,6 +95,7 @@ function NavBar() {
                 </DropdownMenu>
               </UncontrolledDropdown>
                 <NavLink href="/" onClick={() => Auth.logout()}>Logout</NavLink>
+                <NavLink onClick={toggleCart}><i class="fas fa-shopping-cart"></i></NavLink>
             </Nav>
           </Collapse>
         </Navbar>

@@ -4,7 +4,7 @@ import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
 import './login.css'
 import {Link} from 'react-router-dom'
-
+import Cart from '../components/Cart/index'
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -65,6 +65,7 @@ function Login(props) {
 
             </div>
         </form>
+        <Cart />
     </div>
   );
 }
