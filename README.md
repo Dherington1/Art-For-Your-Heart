@@ -52,7 +52,7 @@ https://final-project-drb.herokuapp.com/
 
 ## Contribution 
 
-Contributors: Duncan Herington, Rayna Ortiz, & Brooke Thorson
+Contributors: Duncan Herington, Reyna Ortiz, & Brooke Thorson
 
 
  
