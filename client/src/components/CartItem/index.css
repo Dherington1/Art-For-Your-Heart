@@ -1,0 +1,24 @@
+.removeFromCart:hover {
+    cursor: pointer;
+}
+
+.name {
+    font-size: 25px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.remove-logo {
+    margin-left: 10px;
+}
+
+.remove-logo:hover {
+   cursor: pointer;
+}
+
+.product-img {
+    max-width: 50%
+    /* max-height: 50%; */
+}

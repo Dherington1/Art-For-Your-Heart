@@ -1,9 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
-// import {
-//   Card,
-//   Button
-// } from 'reactstrap';
+import {
+  Col
+} from 'reactstrap';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
@@ -42,16 +41,18 @@ const ShopFavCards = (item) => {
   };
 
   return (
-    <div className="card ">
-      <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
-      </Link>
-        <p className='product-name'>{name}</p>
-      <div className='product-price'>
-        <span>${price}</span>
+    <Col xs={6} sm={4} md={4}>
+      <div className="card ">
+        <Link to={`/products/${_id}`}>
+          <img alt={name} src={`/images/${image}`} />
+        </Link>
+          <p className='product-name'>{name}</p>
+        <div className='product-price'>
+          <span>${price}</span>
+        </div>
+        <button onClick={addToCart}>Add to cart</button>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+    </Col>
   );
 
 }

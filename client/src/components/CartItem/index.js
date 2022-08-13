@@ -1,4 +1,5 @@
 import React from "react";
+import './index.css'
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { useDispatch } from "react-redux";
@@ -41,32 +42,36 @@ const CartItem = ({ item }) => {
   return (
 
 
-    <Container className="cart-container">
+    <Container >
       <Row>
         {/* img */}
-        <Col>
-          <img className="cart-img" src={`/images/${item.image}`} alt="item" />
+        <Col md={6}>
+          <div className="product-img">
+            <img  src={`/images/${item.image}`} alt="item" />
+          </div>
         </Col>
         {/* price , quantity */}
-        <Col xs={8}>
-          <div>
+        <Col xs={8} md={6}>
+          <div className="name">
           {item.name}
           </div>
-          <div>
+          <div className="price">
            $ {item.price}
           </div>
-          <div>
+          <div className="qty">
             <span>Qty: </span>
             <input
-              // type="number"
+              type="number"
               placeholder="1"
               value={item.purchaseQuantity}
               onChange={onChange}
+              className='removeFromCart'
             />
             <span
               role="img"
               aria-label="trash"
               onClick={() => removeFromCart(item)}
+              className='remove-logo'
             >
               ✕
             </span>
@@ -78,36 +83,6 @@ const CartItem = ({ item }) => {
     </Container>
 
 
-
-
-
-
-    // <div className="flex-row">
-    //   <div>
-    //     <img src={`/images/${item.image}`} alt="" />
-    //   </div>
-    //   <div>
-    //     <div>
-    //       {item.name}, $ {item.price}
-    //     </div>
-    //     <div>
-    //       <span>Qty:</span>
-    //       <input
-    //         type="number"
-    //         placeholder="1"
-    //         value={item.purchaseQuantity}
-    //         onChange={onChange}
-    //       />
-    //       <span
-    //         role="img"
-    //         aria-label="trash"
-    //         onClick={() => removeFromCart(item)}
-    //       >
-    //         🗑️
-    //       </span>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

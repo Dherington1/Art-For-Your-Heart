@@ -210,9 +210,8 @@ input:focus {
 }
 
 .card {
-  width: 25%;
+  width: 100%;
   text-align: center;
-  margin-left: 60px;
   margin-bottom: 15px;
 }
 
@@ -223,6 +222,26 @@ input:focus {
 .error-text {
   color: var(--error);
 }
+
+.cart-title {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.cart-total {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
   .card {

@@ -4,6 +4,9 @@ import { pluralize } from "../../utils/helpers";
 import { useSelector, useDispatch } from "react-redux";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import {
+  Col
+} from 'reactstrap';
 
 function ProductItem(item) {
   const state = useSelector(state => state);
@@ -36,16 +39,18 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card ">
-      <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
-      </Link>
-        <p className='product-name'>{name}</p>
-      <div className='product-price'>
-        <span>${price}</span>
+    <Col xs={6} sm={4} md={4}>
+      <div className="card ">
+        <Link to={`/products/${_id}`}>
+          <img alt={name} src={`/images/${image}`} />
+        </Link>
+          <p className='product-name'>{name}</p>
+        <div className='product-price'>
+          <span>${price}</span>
+        </div>
+        <button onClick={addToCart}>Add to cart</button>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+    </Col>
   );
 }
 

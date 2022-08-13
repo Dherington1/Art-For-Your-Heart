@@ -13,7 +13,7 @@ import Cart from "../components/Cart";
 const Kids = () => {
 
   const [products, setProducts] = useState([])  
-  const [search, setSearch] =useState('61dfa9bfec684320a8b67104')
+  const [search, setSearch] =useState('62f7398930933741203d6239')
 
   // grab our data from the query 
   const {data: categoryData} = useQuery(QUERY_PRODUCTS, {
@@ -39,24 +39,21 @@ const Kids = () => {
   return (
     <div>
       <h3>KIDS ART</h3>
-
-          <Container className='shop-container'>
-           
-              <div className='flex-row'>
-              {products.map(product => (
-                  <ProductItem
-                    key={product._id}
-                    _id={product._id}
-                    image={product.image}
-                    name={product.name}
-                    price={product.price}
-                    quantity={product.quantity}
-                  />
-                ))}
-                </div>
-        
-          </Container>
-          <Cart />
+      <Container className='shop-container'>
+        <Row>
+          {products.map(product => (
+              <ProductItem
+                key={product._id}
+                _id={product._id}
+                image={product.image}
+                name={product.name}
+                price={product.price}
+                quantity={product.quantity}
+              />
+            ))}
+          </Row>
+      </Container>
+      <Cart />
     </div>
   )
 }

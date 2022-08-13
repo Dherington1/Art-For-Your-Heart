@@ -11,7 +11,7 @@ const Home = () => {
       <Hero />
       <ShopCategories />
       <ShopFav />
-      <Cart />
+      {/* <Cart /> */}
     </div>
   );
 };

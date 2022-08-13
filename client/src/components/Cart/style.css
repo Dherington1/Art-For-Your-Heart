@@ -52,10 +52,7 @@
   object-fit: cover;
 }
 
-/* .cart img {
-  width: 70px;
-  margin-right: 1rem;
-} */
+
 
 .cart input {
   width: 30px;
@@ -63,6 +60,7 @@
   margin: 0 .5rem 1rem 0;
   text-align: center;
 }
+
 
 @media screen and (max-width: 768px) {
   .cart {

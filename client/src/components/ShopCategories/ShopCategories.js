@@ -16,7 +16,7 @@ const ShopCategories = () => {
         <h3>SHOP BY CATEGORY</h3>
 
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <figure class="textcenter">
               <img className='category-img' src='/images/art-therapy-mc-inline-201016-05.jpeg' alt='kid-art' /> 
               <figcaption className='fig'>
@@ -27,7 +27,7 @@ const ShopCategories = () => {
             </figure>
           </Col>
 
-          <Col>
+          <Col sm={12} md={6}>
             <figure class="textcenter">
               <img className='category-img' src='/images/happy-kids-doing-arts-crafts-together-DIY-Kids-Crafts-ss-Feature.jpeg' alt='kid-art' /> 
               <figcaption>

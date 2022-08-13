@@ -19,10 +19,13 @@
 }
 
 
-.left{
-  margin-right: 50px;
-}
-
 .footer-button{
 width: 200px;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .middle {
+    display: none;
+  }
 }

@@ -15,7 +15,7 @@ const Footer = () => {
     <Container className='footer-container'>
       <Row className='footer-row'>
         {/* left */}
-        <Col className='left'>
+        <Col xs={6} sm={6} md={4} className='left'>
           <h2>OUR NEWSLETTER</h2>
           <p className='newsLetter-p'>Subscribe to our newsletter to receive special offers and updates on new products</p>
           {/* <p>Email *</p> */}
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </Col>
         {/* middle */}
-        <Col className='middle'>
+        <Col xs={6} sm={4} md={4} className='middle'>
           <h2>SHOP</h2>
 
           <p>
@@ -46,7 +46,7 @@ const Footer = () => {
           </p>
         </Col>
         {/* right */}
-        <Col>
+        <Col xs={6} sm={6} md={4}>
           <h2>CONTACT</h2>
           <p>7000 Coliseum Way, Oakland, CA 94621</p>
           <p>info@mysite.com</p>

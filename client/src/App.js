@@ -16,7 +16,7 @@ import store from "./utils/store";
 import Kids from "./pages/Kids";
 import Adults from './pages/Adults'
 import Footer from "./components/Footer/Footer";
-
+import Cart from "./pages/Cart";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -52,6 +52,7 @@ function App() {
               <Route exact path="/products/:id" component={Detail} />
               <Route exact path="/kids" component={Kids} />
               <Route exact path="/professional" component={Adults} />
+              <Route exact path="/Cart" component={Cart} />
               <Route component={NoMatch} />
             </Switch>
             <Footer />
