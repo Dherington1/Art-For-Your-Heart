@@ -6,7 +6,8 @@ https://art-for-your-heart.herokuapp.com/
 
 ## Description 
 
- This is full stack MERN website called ArtForYourHeart. The website is a fake online art store for customers to enjoy and purchase their needed art supplies. The website includes a built-in shopping cart for customers to add items to,and a payment system through stripe to checkout with. 
+ This is full stack MERN website called ArtForYourHeart. The website is a fake online art store for customers to enjoy and purchase their needed art supplies. The website includes a built-in shopping cart for customers to add items to and a payment system through stripe to checkout with. 
+ ** Heroku is slow sometimes please be patient **
 
 
 ## Preview
