@@ -11,7 +11,6 @@ https://art-for-your-heart.herokuapp.com/
 
 ## Mock-Up
 
-The following image shows the web application's appearance:
 ![Screenshot (15)](https://user-images.githubusercontent.com/87780351/191477487-ce9a65da-a697-4009-b9f1-d8a8f42fbef3.png)
 ![Screenshot (16)](https://user-images.githubusercontent.com/87780351/191477498-5982de2f-9044-4d3c-aa4e-9101b1986672.png)
 
