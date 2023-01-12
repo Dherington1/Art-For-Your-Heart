@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts --openssl-legacy-provider start",
     "watch": "nodemon",
-    "seed": "node config/seeds.js"
+    "seed": "node config/seeds.js",
+    "build": "react-scripts --openssl-legacy-provider build"
   },
   "keywords": [],
   "author": "",
