@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "watch": "nodemon",
-    "seed": "node config/seeds.js",
-    "build": "react-scripts --openssl-legacy-provider build"
+    "seed": "node config/seeds.js"
   },
   "keywords": [],
   "author": "",
